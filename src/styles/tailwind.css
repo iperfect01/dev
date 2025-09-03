@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #0A0A0A; /* Deep space black */
+    --color-foreground: #FFFFFF; /* Pure white */
+    --color-border: rgba(192, 208, 227, 0.2); /* Holographic silver with opacity */
+    --color-input: #1A1A1A; /* Elevated dark surface */
+    --color-ring: #00E0FF; /* Electric cyan */
+    
+    /* Card Colors */
+    --color-card: #1A1A1A; /* Elevated dark surface */
+    --color-card-foreground: #FFFFFF; /* Pure white */
+    
+    /* Popover Colors */
+    --color-popover: #1A1A1A; /* Elevated dark surface */
+    --color-popover-foreground: #FFFFFF; /* Pure white */
+    
+    /* Muted Colors */
+    --color-muted: #1A1A1A; /* Elevated dark surface */
+    --color-muted-foreground: #C0D0E3; /* Holographic silver */
+    
+    /* Primary Colors */
+    --color-primary: #00E0FF; /* Electric cyan */
+    --color-primary-foreground: #0A0A0A; /* Deep space black */
+    
+    /* Secondary Colors */
+    --color-secondary: #A66CFF; /* Sophisticated purple */
+    --color-secondary-foreground: #FFFFFF; /* Pure white */
+    
+    /* Destructive Colors */
+    --color-destructive: #FF4757; /* Vibrant red */
+    --color-destructive-foreground: #FFFFFF; /* Pure white */
+    
+    /* Accent Colors */
+    --color-accent: #00FF88; /* Cyber green */
+    --color-accent-foreground: #0A0A0A; /* Deep space black */
+    
+    /* Success Colors */
+    --color-success: #00FF88; /* Cyber green */
+    --color-success-foreground: #0A0A0A; /* Deep space black */
+    
+    /* Warning Colors */
+    --color-warning: #FFB800; /* Warm amber */
+    --color-warning-foreground: #0A0A0A; /* Deep space black */
+    
+    /* Error Colors */
+    --color-error: #FF4757; /* Vibrant red */
+    --color-error-foreground: #FFFFFF; /* Pure white */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+
+  .font-data {
+    font-family: 'Orbitron', monospace;
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(192, 208, 227, 0.2);
+  }
+
+  .glass-light {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(192, 208, 227, 0.1);
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(166, 108, 255, 0.3);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  }
+
+  /* Holographic gradient */
+  .holographic-gradient {
+    background: linear-gradient(135deg, 
+      rgba(0, 224, 255, 0.1) 0%, 
+      rgba(166, 108, 255, 0.1) 50%, 
+      rgba(0, 255, 136, 0.1) 100%);
+  }
+
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-glow {
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(26, 26, 26, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 224, 255, 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 224, 255, 0.5);
+  }
+}
