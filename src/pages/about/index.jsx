@@ -33,7 +33,7 @@ const TEAM = [
     name: "J.D MUHIRE",
     role: "CTO",
     bio: "Technical mastermind who turns impossible ideas into scalable, robust systems.",
-     image: "https://i.ibb.co/Z69p7x3h/muhire.jpg",
+     image: "https://i.ibb.co/4ZXpK8Mx/muhire.png",
     stats: ["5+ Years Exp", "28 Projects", "Open Source"],
     color: "from-cyan-600 via-blue-600 to-indigo-600",
     social: { linkedin: "#", twitter: "#", github: "#" }
